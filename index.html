@@ -12,10 +12,10 @@
     <p>OOP Javascript</p>
 
     <script>
-        function Person() {
-            var name;
-            var age;
-            var height;
+        function Person(_name, _age, _height) {
+            var name = _name
+            var age = _age
+            var height = _height
 
             this.sayHello = function(name) {
                 console.log('Hello ' + name)
@@ -55,10 +55,10 @@
 
         Person.static_method()
 
-        var linton = new Person()
-        linton.setName('Linton')
-        linton.setAge(29)
-        linton.setHeight(1.70)
+        var linton = new Person('Linton', 29, 1.70)
+            // linton.setName('Linton')
+            // linton.setAge(29)
+            // linton.setHeight(1.70)
         linton.sayHello(linton.getName())
 
         // var alaho = new Person()
