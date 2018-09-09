@@ -46,6 +46,15 @@
             }
         }
 
+        Person.static_method = function() {
+            console.log('This is my first static method')
+        }
+
+        Person.static_attr = 'First Static Attribute'
+        console.log(Person.static_attr)
+
+        Person.static_method()
+
         var linton = new Person()
         linton.setName('Linton')
         linton.setAge(29)
@@ -57,7 +66,7 @@
         // alaho.age = 28
         // alaho.height = 1.60
         console.log(linton)
-        console.log(alaho)
+            // console.log(alaho)
     </script>
 </body>
 
