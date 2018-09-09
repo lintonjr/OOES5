@@ -13,25 +13,49 @@
 
     <script>
         function Person() {
-            this.name;
-            this.age;
-            this.height;
+            var name;
+            var age;
+            var height;
 
             this.sayHello = function(name) {
                 console.log('Hello ' + name)
             }
+
+            this.getName = function getName() {
+                return name
+            }
+
+            this.setName = function setName(_name) {
+                name = _name
+            }
+
+            this.getAge = function() {
+                return age
+            }
+
+            this.setAge = function(_age) {
+                age = _age
+            }
+
+            this.getHeight = function getHeight() {
+                return height
+            }
+
+            this.setHeight = function setHeight(_height) {
+                height = _height
+            }
         }
 
         var linton = new Person()
-        linton.name = 'Linton'
-        linton.age = 29
-        linton.height = 1.70
-        linton.sayHello(linton.name)
+        linton.setName('Linton')
+        linton.setAge(29)
+        linton.setHeight(1.70)
+        linton.sayHello(linton.getName())
 
-        var alaho = new Person()
-            // alaho.name = 'alaho'
-            // alaho.age = 28
-            // alaho.height = 1.60
+        // var alaho = new Person()
+        // alaho.name = 'alaho'
+        // alaho.age = 28
+        // alaho.height = 1.60
         console.log(linton)
         console.log(alaho)
     </script>
