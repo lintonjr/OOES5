@@ -13,16 +13,27 @@
 
     <script>
         function Person() {
+            this.name;
+            this.age;
+            this.height;
 
+            this.sayHello = function(name) {
+                console.log('Hello ' + name)
+            }
         }
 
-        var Person = function Person() {
+        var linton = new Person()
+        linton.name = 'Linton'
+        linton.age = 29
+        linton.height = 1.70
+        linton.sayHello(linton.name)
 
-        }
-
-        var Person = {
-
-        }
+        var alaho = new Person()
+            // alaho.name = 'alaho'
+            // alaho.age = 28
+            // alaho.height = 1.60
+        console.log(linton)
+        console.log(alaho)
     </script>
 </body>
 
