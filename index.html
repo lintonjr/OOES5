@@ -17,6 +17,10 @@
             var age = _age
             var height = _height
 
+            this.initialize = function() {
+                console.log('init function')
+            }
+
             this.sayHello = function(name) {
                 console.log('Hello ' + name)
             }
@@ -46,27 +50,37 @@
             }
         }
 
-        Person.static_method = function() {
-            console.log('This is my first static method')
+        Person.myStaticFunc = function() {
+            console.log('First static method')
         }
 
         Person.static_attr = 'First Static Attribute'
-        console.log(Person.static_attr)
 
-        Person.static_method()
+        Person.prototype.myProtoFunc = function() {
+                console.log('first proto function')
+            }
+            // console.log(Person.static_attr)
+
+        // Person.static_method()
 
         var linton = new Person('Linton', 29, 1.70)
+        console.log(linton)
+        console.log(linton.__proto__)
+        console.log(Person.prototype)
+        linton.myProtoFunc()
+            // linton.initialize();
+            // linton.sayHello(linton.getName())
             // linton.setName('Linton')
             // linton.setAge(29)
             // linton.setHeight(1.70)
-        linton.sayHello(linton.getName())
+            // linton.sayHello(linton.getName())
 
         // var alaho = new Person()
         // alaho.name = 'alaho'
         // alaho.age = 28
         // alaho.height = 1.60
-        console.log(linton)
-            // console.log(alaho)
+
+        // console.log(alaho)
     </script>
 </body>
 
