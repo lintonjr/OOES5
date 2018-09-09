@@ -57,23 +57,42 @@
         Person.static_attr = 'First Static Attribute'
 
         Person.prototype.myProtoFunc = function() {
-                console.log('first proto function')
+            console.log('first proto function')
+        }
+
+        function Employee(_name, _age, _height) {
+            var salary
+
+            Person.call(this, _name, _age, _height)
+            this.getSalary = function() {
+                return salary
             }
-            // console.log(Person.static_attr)
+
+            this.setSalary = function(_salary) {
+                salary = _salary
+            }
+        }
+
+        Employee.prototype = Object.create(Person.prototype)
+
+        var linton = new Person('Linton', 29, 1.70)
+
+
+        // console.log(Person.static_attr)
 
         // Person.static_method()
 
-        var linton = new Person('Linton', 29, 1.70)
-        console.log(linton)
-        console.log(linton.__proto__)
-        console.log(Person.prototype)
-        linton.myProtoFunc()
-            // linton.initialize();
-            // linton.sayHello(linton.getName())
-            // linton.setName('Linton')
-            // linton.setAge(29)
-            // linton.setHeight(1.70)
-            // linton.sayHello(linton.getName())
+
+        // console.log(linton)
+        // console.log(linton.__proto__)
+        // console.log(Person.prototype)
+        // linton.myProtoFunc()
+        // linton.initialize();
+        // linton.sayHello(linton.getName())
+        // linton.setName('Linton')
+        // linton.setAge(29)
+        // linton.setHeight(1.70)
+        // linton.sayHello(linton.getName())
 
         // var alaho = new Person()
         // alaho.name = 'alaho'
